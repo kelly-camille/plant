@@ -24,3 +24,15 @@ describe('moneyFunction', () => {
   })
   
 })
+
+describe('countMoney', () => {
+  test('should set moneyFunction counter variable to 0', () => {
+    expect(moneyFunction(0)(usaCoins)(1)).toEqual(countMoney(usaCoins)(1));
+  })
+})
+
+describe('usaChange', () => {
+  test('should set countMoney currency variable to usaCoins', () => {
+    expect(countMoney(usaCoins)(1)).toEqual(usaChange(1));
+  })
+})
