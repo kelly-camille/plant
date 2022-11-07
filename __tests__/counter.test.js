@@ -1,0 +1,1 @@
+import AmountInput from '../src/counter.js';
