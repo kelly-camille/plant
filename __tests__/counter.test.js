@@ -8,7 +8,7 @@ describe('coin', () => {
 
 describe('remains', () => {
   test('return the remaining amount of money after the previous change amount was calculated', () => {
-    expect(remains(.25)(10.32)).toEqual(.07);
+    expect(remains(.25)(10.23)).toEqual(.23);
   })
 })
 
@@ -19,7 +19,8 @@ describe('moneyFunction', () => {
   })
 
   test('should return thanks you message once amount is below or equal to 0', () => {
-    expect(moneyFunction(0)(.25)(10)).toEqual("Thanks for using Bank of America ATM");
+    let output = moneyFunction(0)(usaCoins)(10.23);
+    expect(output).toEqual("Thanks for using Bank of America ATM");
   })
   
 })

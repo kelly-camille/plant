@@ -23,7 +23,6 @@ const usaCoins = [
   [.1,'dime'],
   [.05,'nickel'],
   [.01,'penny']
-  // [1, "null"]
 ];
 
 function moneyFunction(counter) {
@@ -38,13 +37,7 @@ function moneyFunction(counter) {
       if (counter > currency.length){
         return "Thanks for using Bank of America ATM"
       } else {
-        //console.log(coin(currency[counter][0])(money) * currency[counter][0]);
-        /*console.log("counter " + (counter + 1));
-        console.log("value " + currency[counter][0]);
-        console.log("money " + money);
-        console.log("remains " + remains(currency[counter][0])(money));*/
         console.log(currency[counter][1] + 's: ' + coin(currency[counter][0])(money));
-        console.log("")
         return moneyFunction(counter + 1)(currency)(remains(currency[counter][0])(money))
       }
     }
@@ -52,7 +45,10 @@ function moneyFunction(counter) {
 }
 
 
-
+/*console.log("counter " + (counter + 1));
+console.log("value " + currency[counter][0]);
+console.log("money " + money);
+console.log("remains " + remains(currency[counter][0])(money));*/
 //Math.round((money % (currency[counter][0]))*100) / 100
 
 const countMoney = moneyFunction(0);
